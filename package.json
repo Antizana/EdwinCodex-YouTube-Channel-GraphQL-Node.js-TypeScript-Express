@@ -8,7 +8,6 @@
     "start": "nodemon ./dist/index.js --exec babel-node -e js",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "prestart": "npm run build",
-
     "clean": "rimraf dist/*",
     "copy-assets": "ts-node tools/copyAssets",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -38,7 +37,15 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@typegoose/typegoose": "^9.7.1",
+    "apollo-server-core": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
+    "class-validator": "^0.13.2",
     "express": "^4.17.3",
-    "graphql": "^16.3.0"
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.2.9",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
   }
 }

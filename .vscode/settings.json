@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
+        "asynciterable",
+        "fileoverview",
+        "graphiql",
         "prebuild",
         "prestart"
     ]

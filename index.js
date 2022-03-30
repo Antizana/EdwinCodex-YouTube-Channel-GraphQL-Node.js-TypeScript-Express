@@ -7,15 +7,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
-const express_graphql_1 = require("express-graphql");
+const graphqlHTTP = require("express-graphql");
 const schema_1 = __importDefault(require("./src/schema"));
 const app = express();
 app.get('/', (req, res) => {
     return res.json({ message: 'Hello World!!' });
 });
-app.use('/graphql', (0, express_graphql_1.graphqlHTTP)({
+app.use('/graphql', graphqlHTTP({
     schema: schema_1.default,
-    rootValue: global,
+    rootValue: root,
     graphiql: true
 }));
 app.listen(3000, () => {
