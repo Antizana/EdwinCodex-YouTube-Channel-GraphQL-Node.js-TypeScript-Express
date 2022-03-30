@@ -8,14 +8,14 @@ import { graphqlHTTP } from 'express-graphql';
 
  const app = express();
 
- app.get('/', (req, res) => {
+ app.get('/', (_req, res) => {
      return res.json({ message: 'Hello World!!' });
  })
 
  app.use('/graphql', graphqlHTTP({
-     schema,
-        rootValue: global,
-        graphiql: true
+    schema,
+    rootValue: global,
+    graphiql: true
     })
 );
 
